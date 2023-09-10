@@ -22,14 +22,14 @@ export function useApiFetch<T> (url: string, options: UseFetchOptions<T> = {}) {
 
     
 
-    return useFetch("http://localhost:8000/" + url, {
+    return useFetch("https://827c-2405-9800-b500-3f2f-f7bd-4f38-9f4b-87b.ngrok-free.app/" + url, {
         credentials : 'include',
         watch : false,
         ...options,
         headers : {
             ...headers,
             ...options?.headers,
-            referer : 'http://localhost:3000'
+            referer : 'https://warm-custard-55ab21.netlify.app/'
         },
         onRequest({request, response, options}) {
         },
